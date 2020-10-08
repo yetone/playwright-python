@@ -48,7 +48,7 @@ jobs:
           browser: chromium
         - os: macos-latest
           python-version: 3.9
-          browser: chromium  
+          browser: chromium
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v2
@@ -73,7 +73,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
+        python -m pip install --upgrade pip wheel
         pip install -r local-requirements.txt
         pip install -e .
     - name: Build driver
