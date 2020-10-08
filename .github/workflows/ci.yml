@@ -39,6 +39,16 @@ jobs:
         os: [ubuntu-latest, windows-latest, macos-latest]
         python-version: [3.7, 3.8]
         browser: [chromium, firefox, webkit]
+        include:
+        - os: ubuntu-latest
+          python-version: 3.9
+          browser: chromium
+        - os: windows-latest
+          python-version: 3.9
+          browser: chromium
+        - os: macos-latest
+          python-version: 3.9
+          browser: chromium  
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v2
